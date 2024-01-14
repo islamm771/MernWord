@@ -38,7 +38,7 @@ main aside svg.bot{
 main > div{
     background-color: #fff;
     border-radius: 20px 0 0 20px;
-    padding: 7rem 3rem;
+    padding: 5rem 3rem;
     text-align: center;
     position: relative;
 }
@@ -73,17 +73,18 @@ main div form .form-con input{
     outline: none;
     padding: 15px 0 15px 30px;
 }
+main div form .form-con .key-off{
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+}
 main .key-con svg.key {
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: -285px;
     transition: 0.5s;
-    transform: rotate(18deg);
-}
-main .form-con.password:hover ~ div.key-con svg.key {
-    top: 40px;
-    left: -275px;
-    transform: rotate(45deg);
+    transform: rotate(12deg);
 }
 main div form .form-con input::placeholder{
     color: #A9A9A9;
@@ -99,7 +100,7 @@ main div form .form-con i{
 }
 main div form button{
     background-color: #36B3FF;
-    background-image: linear-gradient(#36B3FF, #15A5E8, #1750AC, #0D3068);
+    background-image: linear-gradient(-175deg,#36B3FF, #15A5E8, #1750AC, #0D3068);
     color: #fff;
     width:100%;
     font-weight: 700;
@@ -111,7 +112,7 @@ main div p {
     color: #6F6F6F;
     font-size: 15px;
 }
-main div span{
+main div .or{
     background-color: #fff;
     color: #6F6F6F;
     font-size: 25px;
@@ -147,7 +148,7 @@ main div ul li a svg{
 @media (min-width:320px) and (max-width:480px){
     main>div {
             border-radius: 0;
-            padding: 7rem 1rem;
+            padding: 6.25rem 1rem;
         }
     
     main div form {
