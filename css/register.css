@@ -5,7 +5,7 @@ body {
 main {
     background-color: #37B3FF;
     background-image: linear-gradient(#36B3FF, #15A5E8, #1750AC, #0D3068);
-    min-height: 100vh;
+    min-height: 105vh;
     position: relative;
 }
 
@@ -171,6 +171,9 @@ main div ul li a svg {
 }
 
 @media (min-width:320px) and (max-width:599px) {
+    main {
+    min-height: 100vh;
+    }
     main>div {
         border-radius: 0;
         padding: 4rem 1rem;
