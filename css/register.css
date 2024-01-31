@@ -70,7 +70,7 @@ main div form .form-con label {
     color: #165AB3;
     font-weight: 700;
     font-size: 14px;
-    top: -12px;
+    top: -10px;
     left: 20px;
 }
 
@@ -87,7 +87,15 @@ main div form .form-con input {
 main div form .InFname , main div form .InLname{
     padding-left: 15px !important;
 }
-
+main div form .InPhone{
+    padding-left: 75px !important;
+}
+main div form .form-con .ph-code{
+    color: #165AB3;
+    position: absolute;
+    left: 30px;
+    top: 14px;
+}
 main div form .form-con .key-off {
     position: absolute;
     top: 12px;
