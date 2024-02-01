@@ -176,17 +176,18 @@
                 </aside>
                 <div class="col-12 col-md-7">
                     <h2>Login</h2>
+                    <p>Enter your username and password</p>
 
                         <form class="mb-4" action="">
-                            <div class="form-con email">
-                                <label for="">Email</label>
+                            <div class="form-con Username">
+                                <label for="Uname">Username</label>
                                 <i class="fa-solid fa-user"></i>
-                                <input class="InEmail" type="email" placeholder="Enter your Username" required />
+                                <input class="InEmail" id="Uname" type="text" placeholder="Enter your Username" required />
                             </div>
                             <div class="form-con password">
-                                <label for="">Password</label>
+                                <label for="Password">Password</label>
                                 <i class="fa-solid fa-lock"></i>
-                                <input class="InPassword" type="password" placeholder="Enter your Password" required /> 
+                                <input class="InPassword" id="Password" type="password" placeholder="Enter your Password" required /> 
                                 <span class="key-off">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_253_3387" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -205,7 +206,7 @@
                             <div class="mb-4 d-flex justify-content-between">
                                 <div><input type="checkbox"> <label for=""> Remember me </label></div>
                         
-                                <a class="forget text-black-50" href="#"> Forget Password ?</a>
+                                <a class="forget text-black-50" href="./forget_password.html"> Forget Password ?</a>
                             </div>
                             <button type="submit">Sign in</button>
 
@@ -257,7 +258,7 @@
                             </div>
                         </form>
 
-                    <p class="create mt-3" href="#">Don't have account? <a href="#">Create One!</a></p>
+                    <p class="create mt-3">Don't have account? <a href="./register.html">Create One!</a></p>
 
                     <div class="position-relative mt-5 mb-5">
                         <hr />
