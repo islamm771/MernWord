@@ -121,6 +121,7 @@ article .middle{
 article div section{
     background-color: #fff;
     border-radius: 10px;
+    min-height: 250px;
 }
 article div section:first-child{
     width: 70%;
