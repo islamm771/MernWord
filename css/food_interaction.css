@@ -67,6 +67,9 @@ aside button svg{
     color: #125a6c;
     font-size: 22px;
 }
+aside button.close svg{
+    color: red;
+}
 article{
     width: 85%;
     min-height: 100vh;
