@@ -14,8 +14,10 @@ btn_back.onclick = function () {
 
 btn_show.onclick = function () {
     document.querySelector("aside").classList.remove("close");
+    this.classList.add("d-none");
  }
 btn_close.onclick = function () {
   document.querySelector("aside").classList.add("close");
+  btn_show.classList.remove("d-none")
 };
 
