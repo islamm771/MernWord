@@ -39,7 +39,7 @@ aside ul li a{
     /* color: #219EBC; */
     color: #156578;
     text-decoration: none;
-    transition: 0.5s all;
+    transition: 0.3s all;
     overflow: hidden;
 }
 aside ul li a.open{
@@ -54,6 +54,7 @@ aside ul li a.active{
 }
 aside ul li a:hover{
     color: #023047;
+    font-weight: 600;
 }
 aside ul li a:hover svg path{
     fill: #023047;
