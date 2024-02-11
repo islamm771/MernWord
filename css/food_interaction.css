@@ -50,6 +50,7 @@ aside ul li a.open{
 }
 aside ul li a.active{
     color: #023047;
+    font-weight: 600;
 }
 aside ul li a:hover{
     color: #023047;
