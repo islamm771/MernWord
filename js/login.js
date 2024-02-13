@@ -12,9 +12,9 @@ key.onclick = function(){
 
 InPassword.onfocus = function(){
     let key = document.querySelector("main .key-con svg.key");
-    key.style.cssText = 'top: 40px;left: -275px;transform: rotate(32deg);'
+    key.style.cssText = 'top: 40px;left: -275px;transform: rotate(38deg);'
 }
 InEmail.onfocus = function () {
   let key = document.querySelector("main .key-con svg.key");
-  key.style.cssText = "position: absolute;top: 20px;left: -285px;transition: 0.5s;transform: rotate(12deg);";
+  key.style.cssText = "position: absolute;top: 12px;left: -285px;transform: rotate(19deg);";
 };
