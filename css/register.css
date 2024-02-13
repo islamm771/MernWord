@@ -83,7 +83,11 @@ main div form .form-con input {
     outline: none;
     padding: 15px 0 15px 30px;
 }
-
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
 main div form .InFname , main div form .InLname{
     padding-left: 15px !important;
 }
@@ -96,25 +100,28 @@ main div form .form-con .ph-code{
     left: 30px;
     top: 14px;
 }
-main div form .form-con .key-off {
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    cursor: pointer;
-}
-
-main div form .form-con input::placeholder {
-    color: #A9A9A9;
-    font-size: 14px;
-}
-
-main div form .form-con i {
+main div form .form-con > i {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
     color: #165AB3;
+}
+main div form .form-con .key-off {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+main div form .form-con .key-off i {
+    font-size: 18px;
+    color: #165AB3;
+}
+main div form .form-con input::placeholder {
+    color: #A9A9A9;
+    font-size: 14px;
 }
 
 main div form button {
