@@ -64,11 +64,25 @@ main div form .form-con input{
     outline: none;
     padding: 15px 0 15px 30px;
 }
+main div form .form-con .user,
+main div form .form-con .lock {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #165AB3;
+}
 main div form .form-con .key-off{
     position: absolute;
-    top: 12px;
-    right: 15px;
+    top: 50%;
+    right: 7px;
     cursor: pointer;
+    transform: translateY(-50%);
+}
+main div form .form-con .key-off i{
+    font-size: 20px;
+    color: #165AB3;
 }
 main .key-con svg.key {
     position: absolute;
@@ -80,14 +94,6 @@ main .key-con svg.key {
 main div form .form-con input::placeholder{
     color: #A9A9A9;
     font-size: 14px;
-}
-main div form .form-con i{
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #165AB3;
 }
 main div form button{
     background-color: #36B3FF;
