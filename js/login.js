@@ -5,8 +5,10 @@ let key = document.querySelector(".key-off")
 key.onclick = function(){
     if(InPassword.type === 'password'){
         InPassword.type = 'text'
+        key.children[0].classList.replace("fa-eye", "fa-eye-slash");
     }else{
         InPassword.type = "password";
+        key.children[0].classList.replace("fa-eye-slash", "fa-eye");
     }
 }
 
