@@ -34,7 +34,10 @@ nav .auth .sign-up{
     border-radius: 5px;
     margin: 0 7px;
 }
-
+nav .dropdown-item.active,
+nav .dropdown-item:active{
+    background-color: transparent;
+}
 .special-btn, .special-btn:hover{
     background-color: var(--blue-color);
     color: white;
@@ -121,10 +124,7 @@ header .row div img {
 }
 .services .row>div>div div svg{
     position: absolute;
-    right: 0;
-}
-.services .row>div>div div svg:last-child{
-    right: -8px;
+    right: -15px;
 }
 .services .row div a{
     display: block;
@@ -204,42 +204,6 @@ footer .copy-right p{
     font-size: 14px;
 }
 
-
-@media (max-width:768px) {
-    header .row div:first-child {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    header img{
-        width: 100% !important;
-    }
-    .latest img{
-        width: 100% !important;
-    }
-    .latest .row>div {
-        width: 300px;
-        margin: 0 auto;
-    }
-    .latest .row>div:nth-child(odd),
-    .services .row>div:nth-child(odd) {
-            margin-top: 0rem;
-            margin: 30px auto;
-    }
-    .article {
-        padding: 15px;
-        height: auto;
-        position: relative;
-    }
-    .article img {
-        width: 100%;
-    }
-
-    .article .art-details {
-        padding: 20px 0px;
-        width: 100%;
-    }
-}
-
 @media (max-width:992px){
     .auth{
         padding: 15px 0;
@@ -265,5 +229,54 @@ footer .copy-right p{
         padding: 0 20px;
         margin-bottom: 15px;
         width: 75%;
+    }
+}
+
+
+@media (max-width:768px) {
+    header .row div:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    header img {
+        width: 100% !important;
+    }
+
+    .latest img {
+        width: 100% !important;
+    }
+
+    .latest .row>div {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .latest .row>div:nth-child(odd) {
+        margin-top: 0rem;
+        margin: 30px auto;
+    }
+    .services .row>div{
+        width: 80%;
+        margin: 0px auto 30px !important;
+    }
+    /* .services .row>div:nth-child(odd){
+        margin: 0px auto 30px;
+    } */
+    .article {
+        padding: 15px;
+        height: auto;
+        position: relative;
+        width: 80%;
+        margin:0 auto;
+    }
+
+    .article img {
+        width: 100%;
+    }
+
+    .article .art-details {
+        padding: 20px 0px;
+        width: 100%;
     }
 }
