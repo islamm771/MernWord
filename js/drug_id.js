@@ -5,7 +5,15 @@ let form_select = document.querySelector(".form-select");
 
 form_select.onchange = function () {
   console.log(form_select.value);
-  document.querySelector('.color').style.backgroundColor = `${form_select.value}`;
+  if (form_select.value.includes('Select')) {
+    this.style.paddingLeft = '10px'
+    document.querySelector('.color').style.backgroundColor = `transparent`;
+  } else {
+    this.style.paddingLeft = "40px";
+    document.querySelector(
+      ".color"
+    ).style.backgroundColor = `${form_select.value}`;
+  }
 }; 
 
 btn_back.onclick = function () {
@@ -28,7 +36,7 @@ btn_close.onclick = function () {
 
 function dropHandler(ev) {
   console.log("File(s) dropped");
-
+  document.querySelector(".drag-zone").innerHTML = '';
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
 
@@ -43,7 +51,7 @@ function dropHandler(ev) {
         console.log(file);
         document.querySelector(
           ".drag-zone"
-        ).innerHTML = `File name = ${file.name}`;
+        ).innerHTML += `File name = ${file.name} <br />`;
       }
     });
   } else {
