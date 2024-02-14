@@ -85,8 +85,8 @@ article header{
     height: 375px;
     background-color: white;
     background-image: url(../img/Food-Int-Img.png);
-    background-position: 50%;
     background-size: cover;
+    background-position: 50%;
     margin-top: 10px;
     position: relative;
     border-radius: 10px;
@@ -196,14 +196,17 @@ article div.result{
     height: 80px;
     border-radius: 50%;
 }
-@media (width <= 480px){
+
+
+@media (width <=767px) {
     aside {
-            padding: 2rem 1rem;
-            width: 20%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+        padding: 2rem 1rem;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     aside.open {
         width: 50%;
         /* left: -100%; */
@@ -214,17 +217,25 @@ article div.result{
     aside.close {
         left: -100%
     }
-    article{
+
+    article {
         width: 100%;
         padding: 0 1.5rem;
     }
+
     aside.open~article {
         width: 100%;
     }
+
+    article .middle section {
+        min-height: 200px;
+    }
+
     article div:not(.result) {
         flex-wrap: wrap;
         gap: 1rem;
     }
+
     article div section:first-child {
         width: 100%;
     }
@@ -232,22 +243,26 @@ article div.result{
     article div section:last-child {
         width: 100%;
     }
-    article div section form button{
-        width: 220px;
+
+    article div section form input {
+        width: 80%;
+    }
+
+    article div section form button {
+        width: 75%;
     }
 }
 
-
-@media (481px <= width <= 995px) {
+@media (768px <= width <= 995px) {
     aside {
         padding: 2rem;
-        width: 30%;
+        width: 15%;
     }
 
     aside.open {
-        width: 20%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        width: 30%;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     aside.close{
@@ -255,11 +270,11 @@ article div.result{
     }
 
     article {
-        width: 65%;
+        width: 80%;
     }
 
     aside.open~article {
-        width: 75%;
+        width: 65%;
     }
 
     article div:not(.result) {
@@ -273,8 +288,12 @@ article div.result{
     article div section:last-child {
         width: 40%;
     }
+    article div section form input {
+        width: 80%;
+    }
     article div section form button {
         width: 75%;
         margin-bottom: 10px;
     }
 }
+
