@@ -228,6 +228,10 @@
             </ul>
 
             <button class="close d-inline-block d-md-none m-0"><i class="fa-solid fa-x"></i></button>
+            <div class="mt-4">
+                <hr class="w-50 m-auto" />
+                <button class="logout m-0 p-0 mt-4"><img src="./img/Logout 2.png" alt=""></button>
+            </div>
         </aside>
 
         <article>
@@ -245,7 +249,7 @@
                             <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                                 aria-selected="true">Description</button>
-                            <button class="nav-link text-black-50" id="nav-profile-tab" data-bs-toggle="tab"
+                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
                                 aria-selected="false">Image</button>
 
@@ -286,18 +290,19 @@
 
                         <div class="tab-pane fade mt-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <form action="">
-                                <button type="button" onclick="" class="upload d-block m-auto mt-4">
-                                    <label for="file">
-                                        Upload Image
-                                    </label>
-                                </button>
+                                <div>
+                                    <button type="button" onclick="" class="upload d-block m-auto mt-4">
+                                        <label for="file">
+                                            Upload Image
+                                        </label>
+                                    </button>
+                                    <input type="file" id="file" name="file" accept="image/*" style="display:none;" />
+                                </div>
 
-                                <input type="file" id="file" name="file" accept="image/*" style="display:none;" />
-
-                                <div class="position-relative mt-5 mb-5">
+                                <div class="position-relative mt-5">
                                     <hr />
                                     <span class="or">Or</span>
-                                    <div class="mt-5" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+                                    <div class="" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
                                         <p class="drag-zone">Drag one or more files to this <i>drop zone</i>.</p>
                                     </div>
                                 </div>
