@@ -163,13 +163,13 @@ article div > .form-cont {
     width: 70%;
     padding: 15px;
 }
-article .form-cont button.nav-link{
+article .form-cont button.nav-link {
     color: #6F6F6F;
 }
+
 article .form-cont .nav-tabs .nav-item.show .nav-link,
-article .form-cont .nav-tabs .nav-link.active{
+article .form-cont .nav-tabs .nav-link.active {
     color: #000;
-    font-weight: 500;
 }
 
 article div section h6 {
@@ -195,10 +195,12 @@ article div section form button {
     width: 402px;
     height: 40px;
 }
-article div section form button label{
+
+article div section form button label {
     width: 100%;
     cursor: pointer;
 }
+
 article div section form .results {
     display: inline-block;
     padding: 8px 16px;
@@ -209,7 +211,8 @@ article div section form .results {
     color: white;
     height: 40px;
 }
-article div section form div .or{
+
+article div section form div .or {
     background-color: #fff;
     color: #6F6F6F;
     font-size: 25px;
@@ -220,17 +223,22 @@ article div section form div .or{
     transform: translate(-50%, -50%);
     padding: 0 15px;
 }
-article div section form div .drag-zone{
+article div section form div #drop_zone{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article div section form div .drag-zone {
     color: #7C7C7C;
     text-align: center;
 }
-article div section form .color-cont{
-    width: 30%;
+
+article div section form .color-cont {
+    width: 20%;
 }
-article div section form .color-cont select{
-    padding-left: 40px;
-}
-article div section form .color-cont .color{
+
+article div section form .color-cont .color {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -242,7 +250,7 @@ article div section form .color-cont .color{
 }
 
 
-article div > .guide {
+article div>.guide {
     width: 30%;
     padding: 15px;
 }
@@ -319,7 +327,8 @@ article div.result {
     article div .form-cont {
         width: 100%;
     }
-    article div section form input{
+
+    article div section form input {
         width: 80%;
     }
 
@@ -331,7 +340,9 @@ article div.result {
         width: 75%;
         margin-bottom: 10px;
     }
-    article div section form .color-cont, .shape-cont {
+
+    article div section form .color-cont,
+    .shape-cont {
         width: 50%;
     }
 }
@@ -377,6 +388,7 @@ article div.result {
         width: 75%;
         margin-bottom: 10px;
     }
+
     article div section form .color-cont,
     .shape-cont {
         width: 50%;
