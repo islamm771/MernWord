@@ -190,6 +190,9 @@ article .result{
     margin-top: 15px;
     border-radius: 10px;
 }
+article .result h3 span{
+    color: #0096EA;
+}
 article .result > div{
     padding: 2rem;
     border: 1.24px solid #E6EBED;
