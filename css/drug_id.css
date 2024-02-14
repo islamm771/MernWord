@@ -169,6 +169,7 @@ article .form-cont button.nav-link{
 article .form-cont .nav-tabs .nav-item.show .nav-link,
 article .form-cont .nav-tabs .nav-link.active{
     color: #000;
+    font-weight: 500;
 }
 
 article div section h6 {
