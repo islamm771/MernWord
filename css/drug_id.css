@@ -320,7 +320,8 @@ article div.result {
     }
 
     article div section form button {
-        width: 220px;
+        width: 75%;
+        margin-bottom: 10px;
     }
     article div section form .color-cont, .shape-cont {
         width: 50%;
