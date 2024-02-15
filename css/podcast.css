@@ -280,7 +280,7 @@ main button.toggle-nav {
     }
 
     article form .search {
-        width: 300px;
+        width: 100%;
     }
 
     article .podcasts-cont .podcast .cases {
