@@ -528,6 +528,27 @@ main button.toggle-nav {
     article .podcasts-cont .podcast .case .play svg {
         font-size: 15px;
     }
+    .music-player {
+        flex-direction: column;
+        height: auto;
+    }
+    .progress-controller{
+        margin-bottom: 1rem;
+    }
+    .other-features,
+    .progress-controller {
+        position: static;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .other-features{
+        justify-content: space-evenly;
+    }
+    .song-bar {
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 
