@@ -22,9 +22,6 @@ btn_close.onclick = function () {
 
 let btn_addDrug = document.querySelector(".add-drug");
 let btn_clear = document.querySelector(".btn-clear");
-// btn_addDrug.onclick = function () {
-  
-// };
 
 function addDrug(){
   if (document.querySelector(".drug-name").value) {
@@ -46,3 +43,31 @@ btn_clear.onclick = function () {
   });
   document.querySelector(".drugs").classList.remove("mb-3");
 };
+
+
+
+let words = ["hello", "baby", "abracadabra", "accoutrements"];
+let autocomplete = document.getElementById("autocomplete");
+let search = document.querySelector(".drug-name");
+
+search.addEventListener("keyup", () => {
+  if (search.value.length > 0) {
+    let input = search.value;
+    autocomplete.innerHTML = input;
+    let regex = new RegExp("^" + input + ".*", "i");
+
+    for (let i = 0; i < words.length; i++) {
+      if (words[i].match(regex)) {
+        autocomplete.innerHTML += words[i].slice(input.length, words[i].length);
+        let x = words[i];
+        console.log(x.slice(input.length, x.length));
+        break;
+      }
+    }
+  }
+});
+search.addEventListener("keydown", (e) => {
+  if (search.value.length <= 1 && e.keyCode == 8) {
+    autocomplete.innerHTML = "";
+  }
+});
