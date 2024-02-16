@@ -135,7 +135,7 @@ article .middle section{
     border-radius: 10px;
 }
 article .middle section:first-child{
-    width: 60%;
+    width: 100%;
     padding: 15px;
 }
 article .middle section h6{
@@ -218,45 +218,6 @@ article .middle section form .btn-clear{
     height: 40px;
     cursor: pointer;
 }
-article .middle section:last-child{
-    width: 40%;
-    padding: 15px;
-}
-article .middle section:last-child h5{
-    font-weight: 700;
-    color: #023047;
-    margin-bottom: 20px;
-}
-article .middle section:last-child ul{
-    list-style:none;
-}
-article .middle section:last-child ul li{
-    font-weight: 500;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-}
-article .middle section:last-child ul li span{
-    display: inline-block;
-    padding: 7px;
-    margin-right: 15px;
-    border-radius: 10px;
-}
-article .middle section:last-child ul li:first-child span{
-    background: linear-gradient(137deg, #61FF00 -10.1%, #389300 92.17%);
-}
-article .middle section:last-child ul li:nth-child(2) span{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-            linear-gradient(133.18deg, #00FFF0 9.91%, #219EBC 100%);
-}
-article .middle section:last-child ul li:nth-child(3) span{
-    background: linear-gradient(141.41deg, #FF7676 -39.69%, #E50000 95.56%);
-}
-article .middle section:last-child ul li:nth-child(4) span{
-    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
-}
-article .middle section:last-child ul li:last-child span{
-    background: linear-gradient(318.63deg, #FF5C00 9.24%, #FF9900 156.26%);
-}
 
 
 article div.result{
@@ -319,10 +280,6 @@ article div.result{
         width: 100%;
     }
 
-    article .middle section:last-child {
-        width: 100%;
-    }
-
     article .middle section form button[type='submit'],
     article .middle section form .btn-clear {
         width: 100%;
@@ -364,13 +321,6 @@ article div.result{
     article .middle section form button[type='submit'],
     article .middle section form .btn-clear {
         width: 80%;
-    }
-
-    article .middle section:last-child {
-        width: 40%;
-    }
-    article .middle section:last-child ul li {
-        font-size: 14px;
     }
     
 }
