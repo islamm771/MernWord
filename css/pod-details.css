@@ -113,6 +113,9 @@ article nav .controls button{
     background-color: #000;
     color: #fff;
 }
+article nav .controls button[disabled] {
+    cursor: not-allowed;
+}
 article nav .controls button[disabled] svg{
     color: #7B7B7B;
 }
@@ -297,6 +300,7 @@ main button.toggle-nav {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 999;
 
     height: 7rem;
     padding: var(--padding);
@@ -494,16 +498,26 @@ main button.toggle-nav {
     article form .search {
         width: 100%;
     }
-
+    article header{
+        height: 250px;
+    }
     article header div {
         padding: 15px;
+    }
+    article header div img{
+        width: 100px;
     }
     article header div h2 {
         font-size: 20px;
     }
     article header .play {
-        bottom: 20px;
+        bottom: 15px;
         right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    article header .play svg{
+        font-size: 25px;
     }
     article .podcasts-cont .podcast .cases {
         flex-wrap: wrap;
@@ -528,6 +542,7 @@ main button.toggle-nav {
     article .podcasts-cont .podcast .case .play svg {
         font-size: 15px;
     }
+
     .music-player {
         flex-direction: column;
         height: auto;
