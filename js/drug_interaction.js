@@ -22,16 +22,29 @@ btn_close.onclick = function () {
 
 let btn_addDrug = document.querySelector(".add-drug");
 let btn_clear = document.querySelector(".btn-clear");
-
+let drug_list = []
 function addDrug(){
-  if (document.querySelector(".drug-name").value) {
-    let s = document.createElement("span");
-    s.innerText = document.querySelector(".drug-name").value;
-    s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
-    document.querySelector(".drugs").appendChild(s);
-    document.querySelector(".drugs").classList.add("mb-3");
-  }
 }
+btn_addDrug.onclick = function () { 
+  if (document.querySelector(".drug-name").value) {
+    const value = document.querySelector(".drug-name").value;
+    let s = document.createElement("span");
+    if (!drug_list.includes(value)) {
+      if(drug_list.length <= 10){
+        drug_list.push(value);
+        s.innerText = value;
+        s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
+        document.querySelector(".drugs").appendChild(s);
+        document.querySelector(".drugs").classList.add("mb-3");
+      }
+    } else {
+      const myModal = new bootstrap.Modal("#myModal", {keyboard: false});
+      let modalToggle = document.getElementById('toggleMyModal'); 
+      myModal.show(modalToggle)
+      myModal._dialog.children[0].children[1].innerHTML = `The item [${value}] is already added in list`;
+    }
+  }
+ }
 
 
 btn_clear.onclick = function () {
