@@ -1,6 +1,10 @@
 let btn_back = document.querySelector(".back");
 let btn_show = document.querySelector(".toggle-nav");
 let btn_close = document.querySelector(".close");
+let words = ["hello", "baby", "abracadabra", "accoutrements"];
+let autocomplete = document.getElementById("autocomplete");
+let search = document.querySelector(".drug-name");
+
 
 btn_back.onclick = function () {
   document.querySelector("aside").classList.toggle("open");
@@ -55,32 +59,32 @@ btn_clear.onclick = function () {
     s.remove();
   });
   document.querySelector(".drugs").classList.remove("mb-3");
+  drug_list.splice(0,drug_list.length);
+  autocomplete.innerHTML = ''
 };
 
 
 
-let words = ["hello", "baby", "abracadabra", "accoutrements"];
-let autocomplete = document.getElementById("autocomplete");
-let search = document.querySelector(".drug-name");
 
-search.addEventListener("keyup", () => {
-  if (search.value.length > 0) {
-    let input = search.value;
-    autocomplete.innerHTML = input;
-    let regex = new RegExp("^" + input + ".*", "i");
 
-    for (let i = 0; i < words.length; i++) {
-      if (words[i].match(regex)) {
-        autocomplete.innerHTML += words[i].slice(input.length, words[i].length);
-        let x = words[i];
-        console.log(x.slice(input.length, x.length));
-        break;
-      }
-    }
-  }
-});
-search.addEventListener("keydown", (e) => {
-  if (search.value.length <= 1 && e.keyCode == 8) {
-    autocomplete.innerHTML = "";
-  }
-});
+// search.addEventListener("keyup", () => {
+//   if (search.value.length > 0) {
+//     let input = search.value;
+//     autocomplete.innerHTML = input;
+//     let regex = new RegExp("^" + input + ".*", "i");
+
+//     for (let i = 0; i < words.length; i++) {
+//       if (words[i].match(regex)) {
+//         autocomplete.innerHTML += words[i].slice(input.length, words[i].length);
+//         let x = words[i];
+//         console.log(x.slice(input.length, x.length));
+//         break;
+//       }
+//     }
+//   }
+// });
+// search.addEventListener("keydown", (e) => {
+//   if (search.value.length <= 1 && e.keyCode == 8) {
+//     autocomplete.innerHTML = "";
+//   }
+// });
