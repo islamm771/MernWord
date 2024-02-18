@@ -324,21 +324,21 @@
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 1</h4>
-                            <span class="play">
+                            <span class="play" id="1">
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 2</h4>
-                            <span class="play">
+                            <span class="play" id="2">
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 3</h4>
-                            <span class="play">
+                            <span class="play" id="3">
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
@@ -346,20 +346,20 @@
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 4</h4>
                             <span class="play">
-                                <i class="fa-solid fa-play"></i>
+                                <i class="fa-solid fa-play" id="4"></i>
                             </span>
                         </div>
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 5</h4>
-                            <span class="play">
+                            <span class="play" id="5">
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 6</h4>
-                            <span class="play">
+                            <span class="play" id="6">
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
@@ -396,16 +396,17 @@
             <div class="control-buttons">
                 <i class="fas fa-random"></i>
                 <i class="fas fa-step-backward"></i>
-                <i class="play-pause fas fa-play"></i>
+                <i class="play-pause fas fa-play" id="masterPlay" onclick="PlayMusic();"></i>
                 <i class="fas fa-step-forward"></i>
                 <i class="fas fa-undo-alt"></i>
             </div>
             <div class="progress-container">
-                <span>0:49</span>
+                <span id="currentStart">0:00</span>
                 <div class="progress-bar">
+                    <input class="range" type="range" name="" id="music" min="0" max="100">
                     <div class="progress"></div>
                 </div>
-                <span>3:15</span>
+                <span id="currentEnd">0:00</span>
             </div>
         </div>
         <div class="other-features">
@@ -414,6 +415,7 @@
             <div class="volume-bar">
                 <i class="fas fa-volume-down"></i>
                 <div class="progress-bar">
+                    <input class="range" type="range" name="" id="vol" min="0" max="100">
                     <div class="progress"></div>
                 </div>
             </div>
