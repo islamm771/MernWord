@@ -178,11 +178,6 @@ article header {
     position: relative;
     border-radius: 16px;
 }
-article header{
-    position: sticky;
-    top: 60px;
-    z-index: 9999;
-}
 
 article header div {
     color: #fff;
