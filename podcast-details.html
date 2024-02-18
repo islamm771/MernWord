@@ -310,7 +310,7 @@
                         <p>9 Podcasts</p>
                     </section>
                 </div>
-                <span class="play">
+                <span class="play play-all">
                     <i class="fa-solid fa-play"></i>
                 </span>
             </header>
@@ -318,7 +318,7 @@
             <div class="podcasts-cont pt-4 pb-4">
                 <div class="podcast">
                     <a>
-                        <h3>Podcast Name</h3>
+                        <h3 class="podcast-name">Podcast Name</h3>
                     </a>
                     <div class="cases row">
                         <div class="case">
@@ -345,8 +345,8 @@
                         <div class="case">
                             <img class="img-fluid" src="./img/case-img.png" alt="">
                             <h4>Case 4</h4>
-                            <span class="play">
-                                <i class="fa-solid fa-play" id="4"></i>
+                            <span class="play" id="4">
+                                <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
                         <div class="case">
@@ -363,6 +363,19 @@
                                 <i class="fa-solid fa-play"></i>
                             </span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist pt-4 pb-4 d-none">
+                <h4>Play Next</h4> 
+                <div class="case active">
+                    <div class="img-container">
+                        <img src="./img/case-img.png" alt="">
+                    </div>
+                    <div class="case-describtion ps-2">
+                        <p class="case-name">Case 1</p>
+                        <p class="podcast-name">Podcast Name</p>
                     </div>
                 </div>
             </div>
@@ -394,11 +407,11 @@
         </div>
         <div class="progress-controller">
             <div class="control-buttons">
-                <i class="fas fa-random"></i>
-                <i class="fas fa-step-backward"></i>
+                <!-- <i class="fas fa-random"></i> -->
+                <i class="fas fa-step-backward" onclick="PrevMusic()"></i>
                 <i class="play-pause fas fa-play" id="masterPlay" onclick="PlayMusic();"></i>
-                <i class="fas fa-step-forward"></i>
-                <i class="fas fa-undo-alt"></i>
+                <i class="fas fa-step-forward" onclick="NextMusic()"></i>
+                <!-- <i class="fas fa-undo-alt"></i> -->
             </div>
             <div class="progress-container">
                 <span id="currentStart">0:00</span>
@@ -410,8 +423,7 @@
             </div>
         </div>
         <div class="other-features">
-            <i class="fas fa-list-ul"></i>
-            <i class="fas fa-desktop"></i>
+            <i class="fas fa-list-ul" onclick="ShowPlaylist()"></i>
             <div class="volume-bar">
                 <i class="fas fa-volume-down"></i>
                 <div class="progress-bar">
