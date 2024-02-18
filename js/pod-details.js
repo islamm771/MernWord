@@ -62,15 +62,22 @@ music.addEventListener('timeupdate' , ()=>{
   let music_current = music.currentTime
   let min1 = Math.floor(music_current / 60)
   let sec1 = Math.floor(music_current % 60)
-  
+  let music_duration = music.duration;
+  let min2 = Math.floor(music_duration / 60);
+  let sec2 = Math.floor(music_duration % 60);
+
+
+  if(music_current == music_duration){
+    document
+      .querySelector(".play-pause")
+      .classList.replace("fa-pause", "fa-play");
+  }
+
   if(sec1 < 10){
     sec1 = `0${sec1}`
   }
   currentStart.innerHTML = `${min1}:${sec1}`
 
-  let music_duration = music.duration;
-  let min2 = Math.floor(music_duration / 60);
-  let sec2 = Math.floor(music_duration % 60);
   if (sec2 < 20) {
     sec2 = `0${sec2}`;
   }
@@ -82,9 +89,9 @@ music.addEventListener('timeupdate' , ()=>{
   let progress = (document.querySelector(
     ".progress-container .progress")
   )
-
   progress.style.width = `${width}%`;
 })
+
 
 range.onchange = function () { 
   music.currentTime = this.value * music.duration / 100
