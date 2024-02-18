@@ -272,6 +272,36 @@ article .podcasts-cont .podcast .case .play svg{
     color: white;
 }
 
+article .playlist h4{
+    font-weight: 700;
+    color: #023047;
+}
+article .playlist .case{
+    display: flex ;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #D9DFE4;
+}
+article .playlist .case.active{
+    background-color: #ffffffac;
+}
+article .playlist .img-container img{
+    width: 60px;
+}
+article .playlist .case-describtion .case-name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+article .playlist .case-describtion .podcast-name{
+    font-weight: 400;
+    margin: 0;
+}
+
+
+
+
+
 main button.toggle-nav {
     background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
     color: white;
@@ -467,7 +497,7 @@ main button.toggle-nav {
     width: 100%;
 }
 .volume-bar .progress-bar:hover .progress::after {
-    --size: .8em;
+    --size: 0.5rem;
 }
 
 
@@ -565,7 +595,7 @@ main button.toggle-nav {
         margin-top: 1em;
     }
     .other-features{
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .song-bar {
         position: static;
