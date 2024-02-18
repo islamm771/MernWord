@@ -169,7 +169,7 @@ article nav .dropdown ul a{
 
 article header {
     width: 100%;
-    height: 375px;
+    height: 250px;
     background-color: white;
     background-image: url(../img/podcast-bg.png);
     background-size: cover;
@@ -378,7 +378,7 @@ main button.toggle-nav {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 1.5em;
+    gap: 1em;
     color: var(--secondary-color);
 }
 
@@ -414,15 +414,24 @@ main button.toggle-nav {
     border-radius: 10px;
     width: 30%;
     background-color: #ccc4;
+    position: relative;
+}
+
+.progress-bar input{
+    opacity: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .progress {
-    position: relative;
+    position: absolute;
     height: 100%;
-    width: 30%;
+    width: 0%;
     border-radius: 10px;
     background-color: var(--secondary-color);
+    z-index: 1;
 }
+
 
 .progress-bar:hover .progress {
     background-color: var(--green-color);
@@ -431,10 +440,11 @@ main button.toggle-nav {
 .progress-bar:hover .progress::after {
     content: "";
     position: absolute;
-    --size: 1em;
+    --size: 1.25em;
     width: var(--size);
     height: var(--size);
-    right: 0;
+    right: 5px;
+    bottom: 0;
     border-radius: 50%;
     background-color: var(--primary-color);
     transform: translate(50%, calc(2px - 50%));
@@ -458,6 +468,9 @@ main button.toggle-nav {
     width: 6em;
 }
 
+.volume-bar .progress-bar .progress{
+    width: 100%;
+}
 .volume-bar .progress-bar:hover .progress::after {
     --size: .8em;
 }
