@@ -1,14 +1,14 @@
 let btn_back = document.querySelector(".back");
 let btn_show = document.querySelector(".toggle-nav");
 let btn_close = document.querySelector(".close");
-let music = new Audio("../audio/1.mp3");
+let music = new Audio("./audio/1.mp3");
 let musics = [
-  "../audio/1.mp3",
-  "../audio/2.mp3",
-  "../audio/3.mp3",
-  "../audio/4.mp3",
-  "../audio/5.mp3",
-  "../audio/6.mp3",
+  "./audio/1.mp3",
+  "./audio/2.mp3",
+  "./audio/3.mp3",
+  "./audio/4.mp3",
+  "./audio/5.mp3",
+  "./audio/6.mp3",
 ];
 let podcastName = document.querySelector('article .podcasts-cont .podcast-name')
 
@@ -139,7 +139,7 @@ playAll.onclick = function(){
     let podcast_name = document.createElement("p");
     podcast_name.classList.add("podcast-name");
 
-    img.src = "../img/case-img.png";
+    img.src = "./img/case-img.png";
     img_container.append(img);
 
     case_name.innerHTML = cases[i].querySelector("h4").innerHTML;
