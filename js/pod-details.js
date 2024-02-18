@@ -40,7 +40,7 @@ for(let i =0;i<btn_play.length;i++){
     btn_play[i].onclick = function(){
         document.querySelector(".artist").innerHTML = cases[i].children[1].innerHTML;
         window.scrollTo(0, document.body.scrollHeight);
-        music.src = `../audio/${btn_play[i].id}.mp3`;
+        music.src = `./audio/${btn_play[i].id}.mp3`;
         PlayMusic();
     }
 }
