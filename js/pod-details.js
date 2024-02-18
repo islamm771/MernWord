@@ -41,6 +41,7 @@ for(let i =0;i<btn_play.length;i++){
         document.querySelector(".artist").innerHTML = cases[i].children[1].innerHTML;
         window.scrollTo(0, document.body.scrollHeight);
         music.src = `./audio/${btn_play[i].id}.mp3`;
+        ChangePlaylist(i);
         PlayMusic();
     }
 }
@@ -207,3 +208,36 @@ function onKeyDown(event) {
 }
 
 window.addEventListener("keydown", onKeyDown, false);
+
+
+function ChangePlaylist(index) {
+  let playlist = document.querySelector(".playlist");
+  playlist.innerHTML = "<h4>Play Next</h4>";
+  let caseDiv = document.createElement("div");
+  caseDiv.classList.add("case" , 'active');
+  let img_container = document.createElement("div");
+  img_container.classList.add("img-container");
+  let img = document.createElement("img");
+  let case_describtion = document.createElement("div");
+  case_describtion.classList.add("case-describtion", "ps-2");
+  let case_name = document.createElement("p");
+  case_name.classList.add("case-name");
+  let podcast_name = document.createElement("p");
+  podcast_name.classList.add("podcast-name");
+
+  img.src = "./img/case-img.png";
+  img_container.append(img);
+
+  case_name.innerHTML = cases[index].querySelector("h4").innerHTML;
+  podcast_name.innerHTML = podcastName.innerHTML;
+  case_describtion.append(case_name);
+  case_describtion.append(podcast_name);
+
+  caseDiv.append(img_container);
+  caseDiv.append(case_describtion);
+
+  playlist.append(caseDiv);
+  document.querySelector(".artist").innerHTML =
+    cases[index].querySelector("h4").innerHTML;
+  music.src = musics[index];
+}
