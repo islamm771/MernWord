@@ -44,13 +44,14 @@ for(let i =0;i<btn_play.length;i++){
 
 function PlayMusic(){
   let ele = document.querySelector(".play-pause");
-  
-  if (music.paused || music.currentTime <= 0) {
-    music.play();
-    ele.classList.replace('fa-play', 'fa-pause')
-  } else {
-    music.pause();
-    ele.classList.replace("fa-pause", "fa-play");
+  if(music){
+    if (music.paused || music.currentTime <= 0) {
+      music.play();
+      ele.classList.replace("fa-play", "fa-pause");
+    } else {
+      music.pause();
+      ele.classList.replace("fa-pause", "fa-play");
+    }
   }
 }
 
