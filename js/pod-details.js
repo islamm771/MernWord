@@ -68,7 +68,8 @@ music.addEventListener('timeupdate' , ()=>{
   let sec2 = Math.floor(music_duration % 60);
 
 
-  if(music_current == music_duration){
+  if(music_current && music_duration){
+    if(music_current == music_duration){
     document
       .querySelector(".play-pause")
       .classList.replace("fa-pause", "fa-play");
@@ -91,6 +92,7 @@ music.addEventListener('timeupdate' , ()=>{
     ".progress-container .progress")
   )
   progress.style.width = `${width}%`;
+  }
 })
 
 
