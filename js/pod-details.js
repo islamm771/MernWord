@@ -264,7 +264,7 @@ search.addEventListener("input", () => {
   let found = false;
   if(search.value){
     cases.forEach((c) => {
-    if (search.value != c.innerText.toLowerCase()) {
+    if (search.value.toLowerCase() != c.innerText.toLowerCase()) {
       c.style.display = "none";
     } else if (search.value == c.innerText.toLowerCase()) {
       found = true;
