@@ -253,3 +253,33 @@ function ChangePlaylist(index) {
   playlist.append(caseDiv);
   music.src = musics[index];
 }
+
+
+let search = document.querySelector('.search')
+search.addEventListener("input", () => {
+  window.removeEventListener("keydown", onKeyDown, false);
+  cases.forEach((c) => {
+    c.style.display = "block";
+  });
+  let found = false;
+  if(search.value){
+    cases.forEach((c) => {
+    if (search.value != c.innerText.toLowerCase()) {
+      c.style.display = "none";
+    } else if (search.value == c.innerText.toLowerCase()) {
+      found = true;
+    }
+  });
+  }
+
+  if (!found) {
+    document.querySelector(".validTxt").classList.remove("d-none");
+  } else {
+    document.querySelector(".validTxt").classList.add("d-none");
+  }
+});
+
+
+search.onblur = function(){
+  window.addEventListener("keydown", onKeyDown, false);
+}
