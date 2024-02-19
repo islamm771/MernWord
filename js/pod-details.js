@@ -11,6 +11,7 @@ let musics = [
   "./audio/6.mp3",
 ];
 let podcastName = document.querySelector('article .podcasts-cont .podcast-name')
+let playlist = document.querySelector(".playlist");
 
 btn_back.onclick = function () {
   document.querySelector("aside").classList.toggle("open");
@@ -38,7 +39,7 @@ let currentEnd = document.getElementById("currentEnd");
 
 for(let i =0;i<btn_play.length;i++){
     btn_play[i].onclick = function(){
-        document.querySelector(".artist").innerHTML = cases[i].children[1].innerHTML;
+        // document.querySelector(".artist").innerHTML = cases[i].children[1].innerHTML;
         window.scrollTo(0, document.body.scrollHeight);
         music.src = `./audio/${btn_play[i].id}.mp3`;
         ChangePlaylist(i);
@@ -56,13 +57,16 @@ function PlayMusic(){
       music.pause();
       ele.classList.replace("fa-pause", "fa-play");
     }
+    let index = musics.indexOf("." + music.src.slice(music.src.indexOf('/audio')) );
+    document.querySelector(".artist").innerHTML =
+      cases[index].querySelector("h4").innerHTML;
   }
 }
 
 
 let range = document.getElementById("music");
 let vol = document.getElementById("vol");
-
+let index = 0;
 music.addEventListener('timeupdate' , ()=>{
   let music_current = music.currentTime
   let min1 = Math.floor(music_current / 60)
@@ -71,31 +75,48 @@ music.addEventListener('timeupdate' , ()=>{
   let min2 = Math.floor(music_duration / 60);
   let sec2 = Math.floor(music_duration % 60);
 
-
   if(music_current && music_duration){
     if(music_current == music_duration){
-    document
-      .querySelector(".play-pause")
-      .classList.replace("fa-pause", "fa-play");
-  }
+      if (playlist.children.length > 1) {
+      index = musics.indexOf("." + music.src.slice(music.src.indexOf('/audio')) ) + 1;
+      if(index < musics.length){
+        let PlayCases = document.querySelectorAll(".playlist .case");
+        PlayCases.forEach((p) => {
+          p.classList.remove("active");
+        });
+        PlayCases[index].classList.add("active");
+        music.src = musics[index];
+        PlayMusic();
+      }else{
+        document
+          .querySelector(".play-pause")
+          .classList.replace("fa-pause", "fa-play");
+      }
+    }
+    else{
+      document
+        .querySelector(".play-pause")
+        .classList.replace("fa-pause", "fa-play");
+    }
+    }
 
-  if(sec1 < 10){
-    sec1 = `0${sec1}`
-  }
-  currentStart.innerHTML = `${min1}:${sec1}`
+    if(sec1 < 10){
+      sec1 = `0${sec1}`
+    }
+    currentStart.innerHTML = `${min1}:${sec1}`
 
-  if (sec2 < 20) {
-    sec2 = `0${sec2}`;
-  }
-  currentEnd.innerHTML = `${min2}:${sec2}`;
+    if (sec2 < 20) {
+      sec2 = `0${sec2}`;
+    }
+    currentEnd.innerHTML = `${min2}:${sec2}`;
 
-  let width = parseInt((music_current / music_duration) * 100);
-  range.value = width
+    let width = parseInt((music_current / music_duration) * 100);
+    range.value = width
 
-  let progress = (document.querySelector(
-    ".progress-container .progress")
-  )
-  progress.style.width = `${width}%`;
+    let progress = (document.querySelector(
+      ".progress-container .progress")
+    )
+    progress.style.width = `${width}%`;
   }
 })
 
@@ -114,7 +135,7 @@ vol.onchange = function () {
 
 function ShowPlaylist(){
   let podcast = document.querySelector(".podcasts-cont");
-  let playlist = document.querySelector(".playlist");
+  let playlist = document.querySelector(".playlist-cont");
   podcast.classList.toggle('d-none')
   playlist.classList.toggle('d-none')
   window.scrollTo(0, 250);
@@ -124,9 +145,7 @@ function ShowPlaylist(){
 let playAll = document.querySelector('.play-all');
 
 playAll.onclick = function(){
-  let playlist = document.querySelector(".playlist");
-  playlist.innerHTML = "<h4>Play Next</h4>";
-
+  playlist.innerHTML = ''
   for (let i = 0; i < cases.length; i++) {
     let caseDiv = document.createElement("div");
     caseDiv.classList.add("case");
@@ -154,15 +173,12 @@ playAll.onclick = function(){
     playlist.append(caseDiv);
     if (i == 0) {
       caseDiv.classList.add("active");
-      document.querySelector(".artist").innerHTML = cases[i].querySelector("h4").innerHTML;
       music.src = musics[i];
     }
   }
   PlayMusic();
 }
 
-
-let index = 0
 function PrevMusic(){
   let PlayCases = document.querySelectorAll('.playlist .case')
   index--;
@@ -197,7 +213,6 @@ function NextMusic(){
 }
 
 
-
 function onKeyDown(event) {
   switch (event.keyCode) {
     case 32: //SpaceBar
@@ -211,8 +226,7 @@ window.addEventListener("keydown", onKeyDown, false);
 
 
 function ChangePlaylist(index) {
-  let playlist = document.querySelector(".playlist");
-  playlist.innerHTML = "<h4>Play Next</h4>";
+  playlist.innerHTML = ''
   let caseDiv = document.createElement("div");
   caseDiv.classList.add("case" , 'active');
   let img_container = document.createElement("div");
@@ -237,7 +251,5 @@ function ChangePlaylist(index) {
   caseDiv.append(case_describtion);
 
   playlist.append(caseDiv);
-  document.querySelector(".artist").innerHTML =
-    cases[index].querySelector("h4").innerHTML;
   music.src = musics[index];
 }
