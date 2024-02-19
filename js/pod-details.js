@@ -266,7 +266,7 @@ search.addEventListener("input", () => {
     cases.forEach((c) => {
     if (search.value.toLowerCase() != c.innerText.toLowerCase()) {
       c.style.display = "none";
-    } else if (search.value == c.innerText.toLowerCase()) {
+    } else if (search.value.toLowerCase() == c.innerText.toLowerCase()) {
       found = true;
     }
   });
