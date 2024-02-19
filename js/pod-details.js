@@ -105,7 +105,7 @@ music.addEventListener('timeupdate' , ()=>{
     }
     currentStart.innerHTML = `${min1}:${sec1}`
 
-    if (sec2 < 20) {
+    if (sec2 < 10) {
       sec2 = `0${sec2}`;
     }
     currentEnd.innerHTML = `${min2}:${sec2}`;
