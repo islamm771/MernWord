@@ -468,7 +468,7 @@ main button.toggle-nav {
     height: var(--size);
     right: 5px;
     bottom: 0;
-    border-radius: 50%;
+/*     border-radius: 50%; */
     background-color: var(--primary-color);
     transform: translate(50%, calc(2px - 50%));
 }
