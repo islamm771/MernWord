@@ -221,6 +221,10 @@ article .podcasts-cont .podcast .case h4{
     margin-top: 10px;
     margin-bottom: 0;
 }
+article .podcasts-cont .podcast .case img{
+    width: 100%;
+    border-radius: 16px;
+}
 article .podcasts-cont .podcast .case .play{
     position: absolute;
     bottom: 30px;
