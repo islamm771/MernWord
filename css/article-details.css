@@ -64,7 +64,7 @@ header{
     width: 90%;
     margin: 0 auto;
     margin-bottom: -40px;
-    box-shadow: 22px 36px 34px -9px #CAE1EA6B;
+    box-shadow: 0px 36px 34px -9px #CAE1EA6B;
 }
 header .header-title .title{
     font-weight: 700;
