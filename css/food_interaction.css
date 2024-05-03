@@ -1,0 +1,103 @@
+article header{
+    background-image: url(../img/Food-Int-Img.png);
+}
+article .middle section{
+    min-height: 250px;
+}
+article .middle section:first-child{
+    width: 70%;
+    padding: 15px;
+}
+
+article .middle section form span{
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    border: 0;
+    color: white;
+    height: 40px;
+
+}
+article .middle section:last-child{
+    width: 30%;
+    padding: 15px;
+}
+article .middle section:last-child ul{
+    list-style:decimal;
+}
+article .middle section:last-child ul li{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+article .middle section:last-child ul li span{
+    color: #0096EA;
+}
+article .result h3 span{
+    color: #0096EA;
+}
+article .result > div{
+    padding: 2rem;
+    border: 1.24px solid #E6EBED;
+    border-radius: 19.88px;
+}
+article .result .inter-result{
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1.24px solid #858C94;
+    border-radius: 10px 10px 0 0;
+}
+article .result .inter-result p{
+    padding: 20px 10px;
+    margin: 0;
+    color: #858C94;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: 1.24px solid #858C94;
+    border-radius: 0 0 7px 7px;
+}
+
+.toggle-nav{
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    left: -55px;
+    border: 0;
+    z-index: 9;
+    padding-left: 55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.tooltip-success {
+    --bs-tooltip-bg: #fff;
+    /* or hardcode any color */
+}
+
+@media (width <=767px) {
+    article .middle section {
+        min-height: 200px;
+    }
+
+    article div section form input {
+        width: 80% !important;
+    }
+
+    article div section form button {
+        width: 75% !important;
+    }
+}
+
+@media (768px <= width <= 995px) {
+    article div section form input {
+        width: 80% !important;
+    }
+    article div section form button {
+        width: 75% !important;
+        margin-bottom: 10px;
+    }
+}
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MernWord</title>
+    <link rel="shortcut icon" href="./img/icons8-pharmacy-shop-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/register.css">
+    <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="d-flex">
+        <aside class="col-12 position-relative d-none d-md-block">
+            <svg class="top" width="413" height="393" viewBox="0 0 413 393" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="314" cy="58" r="99" fill="#0D3169" />
+                <circle opacity="0.5" cx="80" cy="42" r="239" fill="white" />
+                <circle opacity="0.8" cx="16.5" cy="275.5" r="117.5" fill="#36B3FF" />
+            </svg>
+
+            <svg class="top-right" width="273" height="471" viewBox="0 0 273 471" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="99" cy="99" r="99" transform="matrix(-1 8.74228e-08 8.74228e-08 1 198 37)"
+                    fill="#0D3169" />
+                <circle opacity="0.5" cx="239" cy="239" r="239" transform="matrix(-1 8.74228e-08 8.74228e-08 1 572 -119)"
+                    fill="white" />
+            </svg>
+
+            <svg class="bot-right" width="202" height="480" viewBox="0 0 202 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.5"
+                    d="M23 336C23 467.996 130.004 575 262 575C393.996 575 501 467.996 501 336C501 204.004 393.996 97 262 97C130.004 97 23 204.004 23 336Z"
+                    fill="white" />
+                <circle opacity="0.5" cx="117.5" cy="117.5" r="117.5" transform="matrix(-1 8.74228e-08 8.74228e-08 1 235 429)"
+                    fill="#36B3FF" />
+            </svg>
+            <svg class="bot" width="342" height="393" viewBox="0 0 342 558" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="-2" cy="99" r="99" fill="#0D3169" />
+                <path opacity="0.5"
+                    d="M319 336C319 467.996 211.996 575 80 575C-51.996 575 -159 467.996 -159 336C-159 204.004 -51.996 97 80 97C211.996 97 319 204.004 319 336Z"
+                    fill="white" />
+                <circle opacity="0.5" cx="224.5" cy="546.5" r="117.5" fill="#36B3FF" />
+            </svg>
+
+        </aside>
+
+        <div class="h-100">
+            <h2>Sign Up</h2>
+            <p>Enter the required data and you are good to go!</p>
+
+            <form class="mb-4" action="">
+                <div class="form-con fname">
+                    <label for="Fname">First Name</label>
+                    <input class="InFname" id="Fname" type="text" placeholder="Enter your First Name" required />
+                </div>
+                <div class="form-con lname">
+                    <label for="Lname">Family Name</label>
+                    <input class="InLname" id="Lname" type="text" placeholder="Enter your Family Name" required />
+                </div>
+                <div class="form-con username">
+                    <label for="Uname">Username</label>
+                    <i class="fa-solid fa-user"></i>
+                    <input class="InEmail" id="Uname" type="text" placeholder="Enter your Username" required />
+                </div>
+                <div class="form-con password">
+                    <label for="Password">Password</label>
+                    <i class="fa-solid fa-lock"></i>
+                    <input class="InPassword" id="Password" type="password" placeholder="Enter your Password" required />
+                    <span class="key-off">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                    <br />
+                </div>
+                <div class="form-con phone">
+                    <label for="Phone">Phone Number</label>
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="ph-code">+20 |</span>
+                    <input class="InPhone" id="Phone" type="text" placeholder="Enter your Phone Number" required />
+                </div>
+
+
+                <button type="submit">Sign Up</button>
+
+            </form>
+
+            <div class="position-relative or-cont">
+                <hr />
+                <span class="or">Or</span>
+            </div>
+
+            <ul class="list-unstyled d-flex justify-content-center gap-3">
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                            <path fill="#FFC107"
+                                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+                            <path fill="#FF3D00"
+                                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+                            <path fill="#4CAF50"
+                                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+                            <path fill="#1976D2"
+                                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+                        </svg>
+                        Sign in with Google
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0,0,256,256" width="48px" height="48px">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(5.33333,5.33333)">
+                                    <path
+                                        d="M24,5c-10.49341,0 -19,8.50659 -19,19c0,10.49341 8.50659,19 19,19c10.49341,0 19,-8.50659 19,-19c0,-10.49341 -8.50659,-19 -19,-19z"
+                                        fill="#039BE5"></path>
+                                    <path
+                                        d="M26.572,29.036h4.917l0.772,-4.995h-5.69v-2.73c0,-2.075 0.678,-3.915 2.619,-3.915h3.119v-4.359c-0.548,-0.074 -1.707,-0.236 -3.897,-0.236c-4.573,0 -7.254,2.415 -7.254,7.917v3.323h-4.701v4.995h4.701v13.729c0.931,0.14 1.874,0.235 2.842,0.235c0.875,0 1.729,-0.08 2.572,-0.194z"
+                                        fill="#ffffff"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0,0,256,256" style="fill:#000000;">
+                            <g transform="translate(51.2,51.2) scale(0.6,0.6)">
+                                <g fill="#121022" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M-85.33333,341.33333v-426.66667h426.66667v426.66667z" id="bgRectangle">
+                                    </path>
+                                </g>
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(8.53333,8.53333)">
+                                        <path
+                                            d="M25.565,9.785c-0.123,0.077 -3.051,1.702 -3.051,5.305c0.138,4.109 3.695,5.55 3.756,5.55c-0.061,0.077 -0.537,1.963 -1.947,3.94c-1.119,1.703 -2.361,3.42 -4.247,3.42c-1.794,0 -2.438,-1.135 -4.508,-1.135c-2.223,0 -2.852,1.135 -4.554,1.135c-1.886,0 -3.22,-1.809 -4.4,-3.496c-1.533,-2.208 -2.836,-5.673 -2.882,-9c-0.031,-1.763 0.307,-3.496 1.165,-4.968c1.211,-2.055 3.373,-3.45 5.734,-3.496c1.809,-0.061 3.419,1.242 4.523,1.242c1.058,0 3.036,-1.242 5.274,-1.242c0.966,0.001 3.542,0.292 5.137,2.745zM15.001,6.688c-0.322,-1.61 0.567,-3.22 1.395,-4.247c1.058,-1.242 2.729,-2.085 4.17,-2.085c0.092,1.61 -0.491,3.189 -1.533,4.339c-0.935,1.242 -2.545,2.177 -4.032,1.993z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        let key = document.querySelector(".key-off")
+        let InPassword = document.querySelector(".InPassword");
+        key.onclick = function () {
+            if (InPassword.type === 'password') {
+                InPassword.type = 'text'
+                key.children[0].classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                InPassword.type = "password";
+                key.children[0].classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+    </script>
+</body>
+
+</html>

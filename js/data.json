@@ -1,0 +1,34 @@
+{
+    "Podcast_Name_1":[
+        {
+            "id":1,
+            "name":"Case 1",
+            "img":"./img/case-img-1.png"
+        },
+        {
+            "id":2,
+            "name":"Case 2",
+            "img":"./img/case-img-1.png"
+        },
+        {
+            "id":3,
+            "name":"Case 3",
+            "img":"./img/case-img-1.png"
+        },
+        {
+            "id":4,
+            "name":"Case 4",
+            "img":"./img/case-img-1.png"
+        },
+        {
+            "id":5,
+            "name":"Case 5",
+            "img":"./img/case-img-1.png"
+        },
+        {
+            "id":6,
+            "name":"Case 6",
+            "img":"./img/case-img-1.png"
+        }
+    ]
+}

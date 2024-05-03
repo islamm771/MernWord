@@ -1,0 +1,113 @@
+article header{
+    background-image: url(../img/drug-bg-img.png);
+}
+article .middle section:first-child{
+    width: 100%;
+    padding: 15px;
+}
+
+article .middle section form input[type='text']{
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+article .middle section form .drug-name {
+    background-color: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+#autocomplete {
+    position: absolute;
+    /* z-index: -1; */
+    border: 0;
+    left: 11px;
+    top: 40px;
+    color: #858C94;
+    font-size: 18px;
+}
+
+article .middle section form .add-drug{
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #219EBC, #219EBC),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+article .middle section form span{
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 8px;
+    color: #0096EA !important;
+    border: 1px solid !important;
+    border: 0;
+    color: white;
+    height: 40px;
+}
+article .middle section form input[type='checkbox']{
+    border: 1px solid #678391
+}
+article .middle section form label{
+    color: #678391;
+}
+article .middle section form .btn-clear{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #fff;
+    padding: 0px 16px;
+    color: #009eed;
+    border: 0;
+    width: 402px;
+    height: 40px;
+    cursor: pointer;
+}
+
+article .result h3 span {
+    color: #0096EA;
+}
+
+article .result>div {
+    padding: 2rem;
+    border: 1.24px solid #E6EBED;
+    border-radius: 19.88px;
+}
+
+.toggle-nav{
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    left: -55px;
+    border: 0;
+    z-index: 9;
+    padding-left: 55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+@media (width <=767px) {
+    article .middle section form button[type='submit'],
+    article .middle section form .btn-clear {
+        width: 100% !important;
+    }
+}
+
+@media (768px <= width <= 995px) {
+    article .middle section:first-child {
+        width: 100% !important;
+    }
+
+    article .middle section form button[type='submit'],
+    article .middle section form .btn-clear {
+        width: 80% !important;
+    }
+    
+}

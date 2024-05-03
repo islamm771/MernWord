@@ -1,0 +1,134 @@
+article header {
+    background-image: url(../img/drug-id-bg.png);
+}
+article div > .form-cont {
+    width: 70%;
+    padding: 15px;
+}
+article .form-cont button.nav-link {
+    color: #6F6F6F;
+}
+
+article .form-cont .nav-tabs .nav-item.show .nav-link,
+article .form-cont .nav-tabs .nav-link.active {
+    color: #000;
+}
+
+
+article div section form button label {
+    width: 100%;
+    cursor: pointer;
+}
+
+article div section form .results {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    border: 0;
+    color: white;
+    height: 40px;
+}
+
+article div section form div .or {
+    background-color: #fff;
+    color: #6F6F6F;
+    font-size: 25px;
+    font-weight: lighter;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+}
+article div section form div #drop_zone{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article div section form div .drag-zone {
+    color: #7C7C7C;
+    text-align: center;
+}
+
+article div section form .color-cont {
+    width: 20%;
+}
+
+article div section form .color-cont .color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 43px;
+    left: 10px;
+}
+
+
+article div>.guide {
+    width: 30%;
+    padding: 15px;
+}
+
+article div section:last-child ul {
+    list-style: decimal;
+}
+
+article div section:last-child ul li {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+article div section:last-child ul li span {
+    color: #0096EA;
+}
+
+
+
+.toggle-nav {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    left: -55px;
+    border: 0;
+    z-index: 9;
+    padding-left: 55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+@media (width <=767px) {
+
+    article div section form input {
+        width: 80% !important;
+    }
+
+    article div section form button {
+        width: 75% !important;
+        margin-bottom: 10px;
+    }
+
+    article div section form .color-cont,
+    .shape-cont {
+        width: 50% !important;
+    }
+}
+
+
+@media (768px <=width <=995px) {
+    article div section form button {
+        width: 75% !important;
+        margin-bottom: 10px;
+    }
+
+    article div section form .color-cont,
+    .shape-cont {
+        width: 50% !important;
+    }
+}
