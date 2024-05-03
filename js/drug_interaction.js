@@ -27,19 +27,50 @@ btn_close.onclick = function () {
 let btn_addDrug = document.querySelector(".add-drug");
 let btn_clear = document.querySelector(".btn-clear");
 let drug_list = []
-function addDrug(){
-}
-btn_addDrug.onclick = function () { 
-  if (document.querySelector(".drug-name").value) {
-    const value = document.querySelector(".drug-name").value;
+
+
+function displayDrug(value){
     let s = document.createElement("span");
+    s.innerText = value;
+    s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
+    document.querySelector(".drugs").appendChild(s);
+    document.querySelector(".drugs").classList.add("mb-3");
+    s.onclick = function () {
+      drug_list = drug_list.filter((drug) => drug != value);
+      this.remove();
+      let allInputs = document.querySelectorAll('input[type="hidden"]')
+      allInputs.forEach( i => { 
+        if(i.value == s.textContent){
+          i.remove();
+        }
+       })
+       if (document.querySelector(".drugs").children.length == 0) {
+         document.querySelector(".drugs").classList.remove("mb-3");
+       }
+      }
+
+    var drugInput = document.createElement("input");
+
+    // Set attributes for the input (optional)
+    drugInput.setAttribute("type", "hidden");
+    drugInput.setAttribute("name", "drugs");
+    drugInput.setAttribute("value", value);
+
+    // Append the input element to the div
+    var drugForm = document.getElementById("addDrugForm");
+    drugForm.appendChild(drugInput);
+    document.querySelector(".drug-name").value = "";
+}
+
+
+
+btn_addDrug.onclick = function () { 
+  if (document.querySelector(".drug-name").value.trim()) {
+    const value = document.querySelector(".drug-name").value;
     if (!drug_list.includes(value)) {
       if(drug_list.length <= 10){
         drug_list.push(value);
-        s.innerText = value;
-        s.innerHTML += '<i class="fa-solid fa-check ms-2"></i>';
-        document.querySelector(".drugs").appendChild(s);
-        document.querySelector(".drugs").classList.add("mb-3");
+        displayDrug(value);
       }
     } else {
       const myModal = new bootstrap.Modal("#myModal", {keyboard: false});
@@ -62,9 +93,6 @@ btn_clear.onclick = function () {
   drug_list.splice(0,drug_list.length);
   autocomplete.innerHTML = ''
 };
-
-
-
 
 
 // search.addEventListener("keyup", () => {

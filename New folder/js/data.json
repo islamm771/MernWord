@@ -1,0 +1,24 @@
+{
+    "Podcast_Name_1":[
+        {
+            "id":1,
+            "name":"Case 1",
+            "img":"./img/case-img.png"
+        },
+        {
+            "id":2,
+            "name":"Case 2",
+            "img":"./img/case-img.png"
+        },
+        {
+            "id":3,
+            "name":"Case 3",
+            "img":"./img/case-img.png"
+        },
+        {
+            "id":4,
+            "name":"Case 4",
+            "img":"./img/case-img.png"
+        }
+    ]
+}

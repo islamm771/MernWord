@@ -1,0 +1,271 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #edfaff !important;
+}
+
+main {
+    position: relative;
+}
+
+aside {
+    background-color: #fff;
+    /* height: 100vh; */
+    transition: 0.5s;
+    text-align: center;
+    z-index: 99;
+    width: 10%;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+aside.open {
+    padding: 2rem 4rem 2rem 6rem;
+    width: 25%;
+}
+
+aside a.logo {
+    display: block;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+aside ul li {
+    margin-bottom: 2rem;
+}
+
+aside ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 32px;
+    margin: 0 auto;
+    /* color: #219EBC; */
+    color: #125a6c;
+    text-decoration: none;
+    transition: 0.3s all;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+aside ul li a.open {
+    width: 100%;
+    margin: 0;
+    text-align: start;
+    overflow: visible;
+}
+
+aside ul li a.active {
+    color: #023047;
+    font-weight: 600;
+}
+
+aside ul li a:hover {
+    color: #023047;
+    font-weight: 600;
+}
+
+aside ul li a:hover svg path {
+    fill: #023047;
+}
+
+aside button {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    margin-top: 2rem;
+}
+
+aside button svg {
+    color: #125a6c;
+    font-size: 22px;
+}
+
+aside button.close svg {
+    color: red;
+}
+
+article {
+    width: 85%;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+aside.open~article {
+    width: 70%;
+}
+article header {
+    width: 100%;
+    height: 375px;
+    background-color: white;
+    background-size: cover;
+    background-position: 50%;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 16px;
+}
+article header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, #000000 100%);
+    border-radius: 16px;
+}
+article header div {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 15px;
+}
+
+article header div p:first-child {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+article header div h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+article header div p:last-child {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+article .middle {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    gap: 1.5rem;
+}
+article div section {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+article div section h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+article div section form input {
+    width: 60%;
+    border: 1px solid #858C94;
+    border-radius: 7px;
+    padding: 5px 10px;
+    outline: 0;
+    margin-bottom: 20px;
+}
+
+article .middle section form button {
+    padding: 0px 16px;
+    border-radius: 8px;
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    border: 0;
+    color: white;
+    width: 402px;
+    height: 40px;
+}
+
+article div.result {
+    width: 100%;
+    min-height: 300px;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+@media (width <=767px) {
+    aside {
+        padding: 2rem 1rem;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        height: 100vh;
+        }
+    
+    aside.open {
+        width: 50%;
+        /* left: -100%; */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    aside.close {
+        left: -100%
+    }
+
+    article {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    aside.open~article {
+        width: 100%;
+    }
+
+    article .middle {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    article .middle section:first-child {
+        width: 100% !important;
+    }
+    article div section:last-child {
+        width: 100% !important;
+    }
+}
+
+@media (768px <=width <=995px) {
+    aside {
+        padding: 2rem;
+        width: 15%;
+    }
+
+    aside.open {
+        width: 30%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    aside.close {
+        left: -100%
+    }
+
+    article {
+        width: 80%;
+    }
+
+    aside.open~article {
+        width: 65%;
+    }
+
+    article .middle {
+        gap: 1rem;
+    }
+
+    article div section:first-child {
+        width: 60% !important;
+    }
+
+    article div section:last-child {
+        width: 40% !important;
+    }
+}

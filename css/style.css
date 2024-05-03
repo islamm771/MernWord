@@ -257,7 +257,7 @@ footer .copy-right p{
         margin: 30px auto;
     }
     .services .row>div{
-        width: 85%;
+        width: 80%;
         margin: 0px auto 30px !important;
     }
     /* .services .row>div:nth-child(odd){
@@ -267,7 +267,7 @@ footer .copy-right p{
         padding: 15px;
         height: auto;
         position: relative;
-        width: 85%;
+        width: 80%;
         margin:0 auto;
     }
 
