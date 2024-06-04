@@ -102,8 +102,7 @@ header .row div img {
     width: 100%;
     border-radius: 10px;
 }
-.latest .row > div:nth-child(odd),
-.services .row>div:nth-child(odd){
+.latest .row > div:nth-child(odd){
     margin-top: 4rem;
 }
 .latest .card-details{
@@ -112,21 +111,23 @@ header .row div img {
 .latest .card-details h5{
     font-weight: 600;
 }
-.services .row > div > div{
+.services .service{
     box-shadow: 0 0 7px 0 #ddd;
 }
-.services .row>div>div div{
+.services .service div{
     background-color: var(--baby-blue);
     padding-top: 3rem;
     position: relative;
     height: 257px;
     overflow: hidden;
 }
-.services .row>div>div div svg{
+.services .service div > svg,
+.services .service div > img{
     position: absolute;
     right: -15px;
+    bottom: 0;
 }
-.services .row div a{
+.services .service a{
     display: block;
     color: #005468;
     text-decoration: none;
@@ -135,6 +136,27 @@ header .row div img {
     padding: 20px 0;
     font-weight: 500;
 }
+
+.splide__track{
+    height: 350px;
+}
+
+.splide__arrow{
+    top: -60px !important;
+    background-color: #fff !important;
+    box-shadow: 1px 4px 11.3px 0px #6A6A6A12 !important;
+    border: 0.25px solid #E6EBED !important;
+    border-radius: 8px !important;
+    width: 50px !important;
+    height: 40px !important;
+}
+.splide__arrow svg{
+    color: var(--blue-color);
+}
+.splide__arrow.splide__arrow--prev{
+    left: 88%;
+}
+
 .article{
     display: flex;
     flex-wrap: wrap;
@@ -216,6 +238,21 @@ footer .copy-right p{
     header img {
         width: 100% !important;
     }
+
+    .splide__track{
+        height: 350px;
+    }
+    /* .splide__arrow{
+        top: 100% !important;
+        margin-top: 15px;
+    } */
+    .splide__arrow.splide__arrow--prev{
+        left: 80%;
+    }
+    /* .splide__arrow.splide__arrow--next{
+        right: 35%;
+    } */
+    
     .article {
         padding: 15px;
         position: relative;
@@ -256,13 +293,24 @@ footer .copy-right p{
         margin-top: 0rem;
         margin: 30px auto;
     }
-    .services .row>div{
+    .splide__track{
+        height: 350px;
+        margin-bottom: 2.5rem;
+    }
+    .splide__arrow{
+        top: 100% !important;
+        margin: 15px 0;
+    }
+    .splide__arrow.splide__arrow--prev{
+        left: 32%;
+    }
+    .splide__arrow.splide__arrow--next{
+        right: 32%;
+    }
+    .services .service{
         width: 80%;
         margin: 0px auto 30px !important;
     }
-    /* .services .row>div:nth-child(odd){
-        margin: 0px auto 30px;
-    } */
     .article {
         padding: 15px;
         height: auto;
