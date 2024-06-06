@@ -13,6 +13,11 @@ h3 span {
     color: var(--blue-color);
 }
 
+nav .navbar-brand svg{
+    width: 100px;
+    height: 41px;
+}
+
 nav {
     position: sticky !important;
     top: 0;

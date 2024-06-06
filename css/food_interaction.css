@@ -1,3 +1,19 @@
+/* WebKit scrollbar styles */
+/* body::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);;
+    border-radius: 10px;
+} */
+
 article header{
     background-image: url(../img/Food-Int-Img.png);
 }
@@ -43,10 +59,24 @@ article .result > div{
     border-radius: 19.88px;
 }
 article .result .inter-result{
-    max-height: 400px;
+    height: 400px;
     overflow-y: scroll;
     border: 1.24px solid #858C94;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+}
+article .result .inter-result::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+}
+article .result .inter-result::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+article .result .inter-result::-webkit-scrollbar-thumb {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    border-radius: 10px;
 }
 article .result .inter-result p{
     padding: 20px 10px;
@@ -88,6 +118,11 @@ article .result .inter-result p{
 
     article div section form button {
         width: 75% !important;
+    }
+
+    article .result .inter-result::-webkit-scrollbar {
+        width: 5px;
+        /* height: 10px; */
     }
 }
 

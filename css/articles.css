@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 h3 span {
@@ -19,9 +19,12 @@ nav {
     background-color: #fff;
     z-index: 999;
 }
-
-nav div>a,
-nav ul li a {
+nav .navbar-brand svg{
+    width: 100px;
+    height: 41px;
+}
+nav ul li a,
+nav .auth a {
     color: var(--dark-blue) !important;
     font-weight: 700;
 }
