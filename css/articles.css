@@ -19,10 +19,12 @@ nav {
     background-color: #fff;
     z-index: 999;
 }
-nav .navbar-brand svg{
+
+nav .navbar-brand svg {
     width: 100px;
     height: 41px;
 }
+
 nav ul li a,
 nav .auth a {
     color: var(--dark-blue) !important;
@@ -51,17 +53,18 @@ nav .dropdown-item:active {
     background-color: transparent;
 }
 
-.heading{
+.heading {
     color: var(--dark-blue);
     padding: 3rem 0;
 }
-.heading h3{
+
+.heading h3 {
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-main div header::before{
+main div header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -69,18 +72,29 @@ main div header::before{
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, #000000 100%);
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
-main div header .description{
-    position: absolute;
+
+main div header {
+    background-image: url(../img/articles-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10rem;
+    border-radius: 1rem;
+}
+
+main div header .description {
+    /* position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
+    position: relative;
     color: white;
-    padding: 15px 30px;
+    padding: 15px;
 }
 
-main div header .description button{
+main div header .description button {
     background-color: #2684FCBF;
     border: 0;
     padding: 10px 20px;
@@ -89,7 +103,7 @@ main div header .description button{
     margin-bottom: 12px;
 }
 
-main div header .description .title{
+main div header .description .title {
     font-weight: 700;
     font-size: 20px;
 }
@@ -108,7 +122,6 @@ main div header .description .title{
 .article img {
     width: 20%;
     border-radius: 10px;
-    height: 100%;
 }
 
 .article .art-details {
@@ -120,6 +133,11 @@ main div header .description .title{
     font-weight: 700;
 }
 
+
+.article .art-details p {
+    margin-bottom: 10px;
+}
+
 .read-more {
     text-decoration: none;
     color: var(--dark-blue);
@@ -129,17 +147,10 @@ main div header .description .title{
     margin-bottom: -2px;
 }
 
-.read-more.more-article {
+.article .read-more {
     display: block;
     width: fit-content;
     margin-left: auto;
-    padding: 5px;
-}
-
-.articles .read-more {
-    position: absolute;
-    bottom: 15px;
-    right: 25px;
 }
 
 
@@ -168,4 +179,42 @@ footer .copy-right {
 
 footer .copy-right p {
     font-size: 14px;
+}
+
+
+@media (max-width: 992px) {
+    .article {
+        padding: 15px;
+        position: relative;
+    }
+
+    .article img {
+        width: 25%;
+    }
+
+    .article .art-details {
+        padding: 0 20px;
+        width: 75%;
+    }
+}
+
+
+
+@media (max-width:768px) {
+    .article {
+        padding: 15px;
+        height: auto;
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .article img {
+        width: 100%;
+    }
+
+    .article .art-details {
+        padding: 20px 0px 0 0;
+        width: 100%;
+    }
 }
